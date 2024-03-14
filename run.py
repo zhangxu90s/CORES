@@ -460,7 +460,7 @@ def train(args, model, tokenizer):
 
 
         #evaluate    
-        results = evaluate(args, model, tokenizer,args.test_data_file, eval_when_training=True)
+        results = evaluate(args, model, tokenizer,args.eval_data_file, eval_when_training=True)
         for key, value in results.items():
             logger.info("  %s = %s", key, round(value,4))    
             
